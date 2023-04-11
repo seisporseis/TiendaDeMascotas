@@ -3,6 +3,7 @@
     margin: 0%;
     padding: 0%;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -59,12 +60,13 @@ li a:hover {
 }
 
 .checkbtn {
-    height: 30px;
+    height: 10px;
     float: right;
     line-height: 160px;
-    margin-right: 50px;
+    margin-right: 90px;
     cursor: pointer;
     display: none;
+
 }
 
 #check {
