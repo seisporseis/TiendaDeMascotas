@@ -16,10 +16,10 @@
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-                <img src="/Img/barra-de-menus.png" width="'30px" height="30px">
+                <img class="hamburguesa" src="/Img/barra-de-menus.png" >
             </label>
             <a href="#" class="enlace">
-                <img src="/Img/logo definitivo mnascotas.png" alt="" width="140px" height="140px" class="logo">
+                <img src="/Img/logo definitivo mnascotas.png" alt="" class="logo">
             </a>
             <ul>
                 <li><a href="#">Servicios</a></li>
@@ -28,10 +28,64 @@
                 <li><a href="#">¿Te ayudamos?</a></li>
                 <li><a href="#">Atención al cliente</a></li>
                 <li><input class="search" type="text" placeholder="Busqueda"> </li>
-
             </ul>
+            <div id="carro">
+            <i id="cesta" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+        </div>
         </nav>
     </header>
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+        <div class="header-carrito">
+            <h2>Tu Carrito</h2>
+        </div>
+    
+        <div class="carrito-items">
+            
+            <!-- <div class="carrito-item">
+                <img src="recursos/hills.png" width="80px" alt="">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">HILL`S</span>
+                    <div class="selector-cantidad">
+                        <i class="fa-solid fa-minus restar-cantidad"></i>
+                        <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                        <i class="fa-solid fa-plus sumar-cantidad"></i>
+                    </div>
+                    <span class="carrito-item-precio">48.49€</span>
+                </div>
+            <span class="btn-eliminar">
+                    <i class="fa-solid fa-trash"></i>
+            </span>
+            </div>
+            <div class="carrito-item">
+                <img src="recursos/hills.png" width="80px" alt="">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">Skin Glam</span>
+                    <div class="selector-cantidad">
+                        <i class="fa-solid fa-minus restar-cantidad"></i>
+                        <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                        <i class="fa-solid fa-plus sumar-cantidad"></i>
+                    </div>
+                    <span class="carrito-item-precio">18.90€</span>
+                </div>
+            <button class="btn-eliminar">
+                    <i class="fa-solid fa-trash"></i>
+            </button>
+            </div>
+            -->
+        </div>
+        <div class="carrito-total">
+            <div class="fila">
+                <strong>Total</strong>
+                <span class="carrito-precio-total"></span>
+            </div>
+            <button class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+        </button>
+            <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i> </button>
+        </div>
+    </div>
+    </article>
 
     <!--<section class="Contenedor">-->
 
@@ -70,13 +124,117 @@
             </div>
         </section>
     </div>
-
-    <div class="productos">
-        <div class="nombreproductos">
+    <!-- productos -->
+    
+    <div class="productos centrado">
+        <div class="nombreproductos centrado">
             <h1>Productos</h1>
         </div>
-
-        <div class="totaldecajas">
+        <div class ="contenedor">
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/perrocorrea.png">
+                    <div class="productName">
+                        <h3>Arnes y correa</h3>
+                        <span class="priceProduct">10,50€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/pienso.png">
+                    <div class="productName">
+                        <h3>Pienso para perros</h3>
+                        <span class="priceProduct">7,50€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/champu.png">
+                    <div class="productName">
+                        <h3>Champú para gatos</h3>
+                        <span class="priceProduct">2,75€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/conejitos 1.png">
+                    <div class="productName">
+                        <h3>Jaula para conejos</h3>
+                        <span class="priceProduct">25,00€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/Juguete para morder.png">
+                    <div class="productName">
+                        <h3>Mordedor de Perros</h3>
+                        <span class="priceProduct">0,90€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+            <div class="productCardWrapper">
+                <div class="productInfo">
+                    <img class="productCardImg" src="recursos/ACUARIO JPG.png">
+                    <div class="productName">
+                        <h3>Acuario</h3>
+                        <span class="priceProduct">64,50€</span>
+                    </div>
+                </div>
+                <div class="buyButtons">
+                    <div class="addProducts">
+                        <button class="lessProducts">+</button>
+                        <span class="productQuantity">1</span>
+                        <button class="moreProducts">-</button>
+                    </div>
+                    <button class="buy">Añadir a la cesta</button>    
+                </div>
+            </div>
+        </div>
+        <!-- <div class="totaldecajas">
             <div class="caja1">
                 <img class="productosdeimagen" src="Img/pack de comida 1.png">
                 <button class="btnimagen">Pienso para perros</button>
@@ -126,12 +284,12 @@
                     <button class="comprar">Añadir a la cesta</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <!--</section>-->
 
 
-    <div class="containerForm">
+    <div class="containerForm centrado">
         <h2>¿En qué te podemos ayudar?</h2>
         <form>
             <label for="name">Nombre</label>
@@ -185,6 +343,7 @@
                 </div>
             </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
