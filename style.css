@@ -9,6 +9,20 @@ body {
     background-color: #D7C2C2;
 }
 
+h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    line-height: 2rem;
+    text-align: left;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+
 /*---------------------------------------Header---------------*/
 nav {
 
@@ -24,13 +38,13 @@ nav {
 }
 
 .logo {
-    border-radius: 100px;
+    border-radius: 50%;
 }
 
 .search {
     border-radius: 10px;
-    padding: 5px;
-    border-color: rgb(171, 153, 153);
+    padding: 5%;
+    /* border-color: 1px solid rgb(171, 153, 153); */
 }
 
 nav ul {
@@ -71,6 +85,17 @@ li a:hover {
     display: none;
 }
 
+#carrito {
+    position: relative;
+}
+#cesta {
+    position: absolute;
+    padding: 11px 8px;
+    right: 6px;
+    top: 45px;
+    font-size: 28px;
+
+}
 /*---------------------------serviciosyBotones---------------------------------------*/
 .fotogrande {
     background-image: url(/Img/huron.png);
@@ -88,28 +113,33 @@ li a:hover {
     margin: auto;
 }
 
-.botoneservicio {
+.serviciosMobile {
     display: none;
 }
 
 
-.b1 {
-    width: 125px;
-    height: 50px;
-    border-radius: 15px;
-    flex-direction: column;
-    justify-content: space-between;
+.b1 { /*no se usa*/
+
+    background-color: #B2709F;
+    /* width: 25%;
+    height: 10%; */
+    border-radius: 10px;
+    
+    /* flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    
+    
     background-color: #B2709F;
     color: #000000;
     margin: 17px;
-    font-size: 12px;
+    font-size: 1rem;
     text-align: center;
-    align-items: center;
-    margin-top: 15px;
-    flex-direction: column;
+   
+    margin-top: 15px; */
 }
 
-.titulo {
+.titulo { /*no se usa*/
     font-weight: bolder;
     margin-left: 37px;
     text-align: center;
@@ -387,17 +417,49 @@ form textarea {
 
 /*----------------------------------------------------Footer---------------*/
 .footer {
+    padding: 5% 0 5% 0;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: #D9D9D9;
 }
 
-.footer-ezquierda {
+
+
+
+.footer img {
+    padding: 5%;
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+.footer-lista {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.footer-media {
+    color: black;
+    ;
+}
+
+/* .footer-ezquierda {
     width: 50%;
     padding: 20px 150px;
     text-align: center;
 }
 
-.footer-derecha {
+.footer-ezquierda img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 40px;
+} */
+
+/* .footer-derecha {
     width: 50%;
     padding: 20px 150px;
 }
@@ -421,12 +483,6 @@ form textarea {
     padding: 4px 0px;
 }
 
-.footer-ezquierda img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin-top: 40px;
-}
 
 .footer-media {
     margin-top: 40px;
@@ -438,7 +494,7 @@ form textarea {
     background-color: none;
     font-size: 30px;
     padding: 10px;
-}
+} */
 
 /*---------------------------------Mobile---------------------*/
 @media screen and (max-width: 767px) {
@@ -570,7 +626,7 @@ form textarea {
 
     /*----------Mobile-Footer--------- */
 
-    .footer {
+    /* .footer {
         font-size: 12px;
     }
 
@@ -598,13 +654,13 @@ form textarea {
 
     .footer-media i {
         padding: 7px;
-    }
+    } */
 
     /*----------Mobile-Productos--------- */
     .totaldecajas {
         width: 100%;
         display: flex;
-        display: inline-block;
+        /* display: inline-block; */
     }
 
     .productos {
@@ -682,10 +738,21 @@ form textarea {
         background-image: url(/Img/perritotriste.png);
     }
 
-    .botoneservicio {
+    .serviciosMobile {
+        padding: 10% 0 10% 0;
         display: flex;
-        background-color: #D7C2C2;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 0.9rem;
+        font-weight: bold;
+        /* background-color: #D7C2C2; */
+        
+    }
+
+    .btnMobile {
+        background-color: #B2709F;
+        padding: 2%;
+        border-radius: 10px;
     }
 
     .fondoservicios {
@@ -711,9 +778,9 @@ form textarea {
     }
 
     .h1movile {
-        position: relative;
+        /* position: relative; */
         margin: 15px;
-        font-size: 22px;
+        font-size: 1.5rem;
         text-align: center;
         display: block;
     }
@@ -727,7 +794,7 @@ form textarea {
         background-image: url(/Img/perropeluqueria.png);
         border-radius: 10px;
         margin-left: 7%;
-        position: relative;
+        /* position: relative; */
     }
 
     .botonpelu {
