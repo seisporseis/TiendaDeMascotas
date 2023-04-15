@@ -1,0 +1,887 @@
+/*--------------Estilos generales--------------*/
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #D7C2C2;
+}
+
+h3 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.logo {
+    margin: 20%;
+    border-radius: 100px;
+    width: 100px;
+}
+
+.footer-ezquierda img {
+    width: 100px;
+    border-radius: 100%;
+    margin-top: 2%;
+}
+
+.footer-menu {
+    text-decoration: underline;
+    line-height: 2rem;
+}
+
+/*--------------FIN Estilos generales--------------*/
+
+/*-----------------------Header--------------------*/
+    /* header {
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    } */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: end;
+    background: #D7C2C2;
+    height: 150px;
+}	
+	
+.search {
+    border-radius: 10px;
+    padding: 5px;
+}
+	
+.hamburguesa {
+    width: 32px;
+    height: 32px; 
+    margin-right: 10px;
+}
+
+.checkbtn {
+    float: right;
+    margin-right: 60px;
+    cursor: pointer;
+    display: none;
+    margin-top: 55px;
+}
+
+.fotogrande {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+
+#check {
+    display: none;
+}
+
+#carro {
+    position: relative;
+}
+
+#cesta {
+    position: absolute;
+    padding: 11px 8px;
+    right: 6px;
+    top: 45px;
+    font-size: 28px;
+}
+
+/*Escritorio*/
+@media (min-width: 1199.98px)  {
+    
+    /*------Barra de navegacion------*/
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+        list-style: none;
+        z-index: 2;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li a.active,
+    li a:hover {
+        color: #B2709F;
+        transition: .2s;
+    }
+    
+	/*------FIN de Barra de navegacion------*/
+    
+    
+    /*------Servicios------*/
+
+    .fotogrande {
+        background-image: url(/Img/huron.png);
+    }
+
+    .btnMobileServices {
+        display: none;
+    }
+
+    .servicios {
+            margin: 5% 2% 5% 2%;
+        }
+
+    .contenedor-servicios {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2%;
+        
+    }
+
+    .backgroundService { 
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: white;
+        padding: 1%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .fotoServicios {
+        width: 400px;
+        height: 200px;
+    }
+
+    .backgroundService span {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .backgroundService button {
+        background-color: fuchsia;
+        border: 1px solid fuchsia;
+        padding: 4%;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .backgroundService button:hover {
+        box-shadow: 0 0 10px #666;
+    }
+
+     /*------FIN de Servicios------*/
+
+
+    /*----------Productos--------- */
+
+    .productos {
+        background-color: white;
+        padding: 5% 0 0 2%;
+    }
+
+    .contenedorProductos {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 2% 8% 0;
+        /* oculto lo que queda fuera del .contenedor */
+        contain: paint;
+    }
+
+    /* SECCION CONTENEDOR DE ITEMS */
+    .contenedorProductos .contenedor-items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 25px;
+        grid-row-gap: 25px;
+        /* width: 60%; */
+        width: 100%;
+        transition: .3s;
+    }
+
+    .contenedorProductos .contenedor-items .item{
+        /* max-width: 200px; */
+        margin: auto;
+        border-radius: 10px;
+        padding: 8%;
+        transition: .3s;
+        background-color: #D9D9D9;
+        height: 380px;
+    }
+
+    .contenedorProductos .contenedor-items .item .img-item{
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item:hover{
+        box-shadow: 0 0 10px #666;
+    }
+
+    .contenedorProductos .contenedor-items .item .titulo-item{
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .precio-item{
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .contenedorProductos .contenedor-items .item .boton-item{
+        display: block;
+        margin: 10px auto;
+        border: none;
+        background-color: #b2709f;
+        color: #fff;
+        padding: 4% 6%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .contenedorProductos .contenedor-items .item .boton-item:hover {
+        background-color: #b2709f92;
+        color: black;
+    }
+
+    /*----------Footer-------*/
+    
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #D9D9D9;
+        padding: 5%;
+    }
+
+    .footer-menu {
+        padding-left: 2%;
+    }
+
+    .fa-brands {
+        padding-top: 2%;
+        color: black;
+        font-size: 1.5rem;
+    }
+ 
+}
+
+/*Fin Escritorio*/
+
+
+/*Tablet*/
+
+    /*Portrait*/
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+ 
+	/*----------Mobile-Header--------- */
+    .hamburguesa {
+        width: 32px;
+        height: 32px; 
+        margin-right: 10px;
+    }
+
+    .checkbtn {
+        float: right;
+        /* line-height: 160px; */
+        margin-right: 60px;
+        cursor: pointer;
+        /* display: none; */
+        margin-top: 55px;
+    }
+
+    /* nav ul li a {
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(110, 110, 110);
+        top: 150px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    } */
+
+    li a:hover,
+    li a.active {
+        background: #b2709f00;
+        color: #B2709F;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+								
+	
+	/*------Servicios------*/
+
+    .fotogrande {
+        background-image: url(/Img/huron.png);
+    }
+
+    /*----------Servicios----------*/
+
+    .btnMobileServices {
+        padding: 10% 5% 10% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+    }
+
+    .buttonsMobile {
+        margin: 5% 0 5% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .btnMobile {
+        background-color: fuchsia;
+        border: 1px solid fuchsia;
+        padding: 2%;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    .cardMobile {
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+    }
+
+    .cardMobile span {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .servicios {
+        display: none;
+    }
+
+    /*----------Productos--------- */
+
+    .productos {
+        padding: 10% 5% 10% 5%;
+        background-color: white;
+    }
+
+    .contenedorProductos {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 2% 0;
+        /* oculto lo que queda fuera del .contenedor */
+        contain: paint;
+    }
+
+    /* SECCION CONTENEDOR DE ITEMS */
+    .contenedorProductos .contenedor-items{
+        display: grid;
+        gap: 25px;
+    }
+
+    .contenedorProductos .contenedor-items .item{
+        /* max-width: 200px; */
+        margin: auto;
+        border-radius: 10px;
+        padding: 8%;
+        transition: .3s;
+        background-color: #D9D9D9;
+    }
+
+    .contenedorProductos .contenedor-items .item .img-item{
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .titulo-item{
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .precio-item{
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .contenedorProductos .contenedor-items .item .boton-item{
+        display: block;
+        margin: 10px auto;
+        border: none;
+        background-color: #b2709f;
+        color: #fff;
+        padding: 4% 6%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+    /*----------Mobile-Footer--------- */
+    
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #D9D9D9;
+        padding: 5%;
+    }
+
+    .footer-derecha {
+        padding-top: 5%;
+    }
+
+    .footer-menu {
+        padding-left: 5%;
+    }
+
+    .fa-brands {
+        padding-top: 2%;
+        color: black;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+    /*landscape*/
+@media (min-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+ 
+	/*-----header-navegacion-----*/
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: end;
+        background: #D7C2C2;
+        height: 150px;
+    }	
+
+    .logo {
+        margin: 20%;
+        border-radius: 100px;
+        width: 100px;
+    }
+
+    .search {
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+        list-style: none;
+        z-index: 2;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li a.active,
+    li a:hover {
+        color: #B2709F;
+        transition: .2s;
+    }
+    
+	
+	.fotogrande {
+        background-image: url(/Img/huron.png);
+    }
+
+
+     /*------Servicios------*/
+
+     .fotogrande {
+        background-image: url(/Img/huron.png);
+    }
+
+    .btnMobileServices {
+        display: none;
+    }
+
+    .servicios {
+            margin: 5% 2% 5% 2%;
+        }
+
+    .contenedor-servicios {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2%;
+        
+    }
+
+    .backgroundService { 
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: white;
+        padding: 1%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .fotoServicios {
+        width: 400px;
+        height: 200px;
+    }
+
+    .backgroundService span {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    .backgroundService button {
+        background-color: fuchsia;
+        border: 1px solid fuchsia;
+        padding: 4%;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .backgroundService button:hover {
+        box-shadow: 0 0 10px #666;
+    }
+
+     /*------FIN de Servicios------*/
+
+
+    /*----------Productos--------- */
+
+    .productos {
+        padding: 5% 2% 0 2%;
+        background-color: white;
+    }
+
+    .contenedorProductos {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 8% 0;
+        /* oculto lo que queda fuera del .contenedor */
+        contain: paint;
+    }
+
+    /* SECCION CONTENEDOR DE ITEMS */
+    .contenedorProductos .contenedor-items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 25px;
+        grid-row-gap: 25px;
+        /* width: 60%; */
+        width: 100%;
+        transition: .3s;
+    }
+
+    .contenedorProductos .contenedor-items .item{
+        /* max-width: 200px; */
+        margin: auto;
+        border-radius: 10px;
+        padding: 8%;
+        transition: .3s;
+        background-color: #D9D9D9;
+        height: 380px;
+    }
+
+    .contenedorProductos .contenedor-items .item .img-item{
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item:hover{
+        box-shadow: 0 0 10px #666;
+        scale: 1.02;
+    }
+
+    .contenedorProductos .contenedor-items .item .titulo-item{
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .precio-item{
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .contenedorProductos .contenedor-items .item .boton-item{
+        display: block;
+        margin: 10px auto;
+        border: none;
+        background-color: #b2709f;
+        color: #fff;
+        padding: 4% 6%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    /*----------Footer-------*/
+    footer {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #D9D9D9;
+        padding: 5%;
+    }
+
+    .footer-menu {
+        padding-left: 2%;
+    }
+
+    .fa-brands {
+        padding-top: 2%;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+}
+/*fin tablet*/
+
+
+
+/*movil*/
+
+    /*Portrait*/
+    /*Default*/
+@media (max-width: 575.98px)and (orientation:portrait) {
+   
+    /*----------Mobile-Header--------- */
+    .checkbtn {
+        display: flex;
+        padding-left: 300px;
+    }
+
+    .enlace {
+        
+        position: absolute;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(110, 110, 110);
+        top: 150px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover,
+    li a.active {
+        background: #b2709f00;
+        color: #B2709F;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+    
+    .fotogrande {
+        background-image: url(/Img/perritotriste.png);
+    }
+
+
+    /*----------Servicios----------*/
+
+    .btnMobileServices {
+        padding: 10% 5% 10% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        
+    }
+
+    .buttonsMobile {
+        margin: 5% 0 5% 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .btnMobile {
+        background-color: fuchsia;
+        border: 1px solid fuchsia;
+        padding: 2%;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    .cardMobile {
+        display: flex;
+        flex-direction: column;
+        
+        padding: 2%;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+    }
+
+    .cardMobile span {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    
+    .servicios {
+        display: none;
+    }
+
+
+    /*----------Productos--------- */
+
+    .productos {
+        padding: 10% 5% 10% 5%;
+        background-color: white;
+    }
+
+    .contenedorProductos {
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 0 8% 0;
+        /* oculto lo que queda fuera del .contenedor */
+        contain: paint;
+    }
+
+    /* SECCION CONTENEDOR DE ITEMS */
+    .contenedorProductos .contenedor-items{
+        display: grid;
+        grid-gap: 25px;
+        grid-row-gap: 25px;
+        /* width: 60%; */
+        width: 100%;
+        transition: .3s;
+    }
+
+    .contenedorProductos .contenedor-items .item{
+        /* max-width: 200px; */
+        margin: auto;
+        border-radius: 10px;
+        padding: 8%;
+        transition: .3s;
+        background-color: #D9D9D9;
+        height: 420px;
+    }
+
+    .contenedorProductos .contenedor-items .item .img-item{
+        width: 100%;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .titulo-item{
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 5%;
+    }
+
+    .contenedorProductos .contenedor-items .item .precio-item{
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .contenedorProductos .contenedor-items .item .boton-item{
+        display: block;
+        margin: 10px auto;
+        border: none;
+        background-color: #b2709f;
+        color: #fff;
+        padding: 4% 6%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+    /*----------Mobile-Footer--------- */
+    
+    footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #D9D9D9;
+        padding: 5%;
+    }
+
+    .footer-derecha {
+        padding-top: 5%;
+    }
+    
+    .footer-menu {
+        padding-left: 5%;
+    }
+
+    .fa-brands {
+        padding-top: 2%;
+        color: black;
+        font-size: 1.5rem;
+    }
+}
+/*fin movil*/
