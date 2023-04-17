@@ -202,7 +202,7 @@
     </section>      
                           
 
-    <div class="containerForm centrado">
+    <!-- <div class="containerForm centrado">
         <h2>¿En qué te podemos ayudar?</h2>
         <form>
             <label for="name">Nombre</label>
@@ -225,8 +225,66 @@
             <input class="formButton" type="submit" value="Enviar">
             <br>
         </form>
-    </div>
+    </div> -->
+    <div class="containerForm">
+        <h2>¿En qué te podemos ayudar?</h2>
+      
+        <form id = "formulario" class = "form" action="" method="post">
+            
+            <div class=form-control>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" minlength="3" size="30" placeholder="  Nombre "
+                title="Escribe solo tu nombre" >
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+                <br>
+            </div>
+            <div class=form-control>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" minlength="3" size="30" placeholder="  Apellidos"
+                    title="Escribe solo tu apellido" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                <br>
+            </div>
+            <div class=form-control>
+                <label for="email">Email</label>
+                <input class="email" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30"
+                    placeholder="  hola@ejemplo.com" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                <br>
+            </div>
+            <div class=form-control>
+                <label for="telefono">Teléfono </label>
+                <input type="tel" id="telefono" maxlength="12" size="30" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="  +34 600 000 000" title="escribe solo números" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                <br>
+            </div>
+            <div class=form-control>
+                <div class="mensaje">
+                    <label for="mensaje">Comentario</label>
+                    <textarea id="mensaje" rows="35" cols="35" placeholder="  Escribe aquí tus dudas" ></textarea> 
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                    <br>
+                </div>
+            </div>
+            
+            <button class="formButton" type="submit" value="Enviar">Enviar</button> 
+            <br>
+        </form> 
+     <div id ="error">
 
+    </div> 
+    </div>
 <footer>
 <!-- <div class="footer"> -->
     <div class="footer-ezquierda">
@@ -256,7 +314,7 @@
         </div>
     <!-- </div> -->
 </footer>
-    <!-- <script src="index.js"></script> -->
+    <script src="formulario.js"></script>
 </body>
 
 </html>
