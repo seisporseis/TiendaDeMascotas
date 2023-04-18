@@ -4,6 +4,7 @@ const nombre = document.getElementById("name");
 const apellido = document.getElementById("apellido");
 const email = document.getElementById("email");
 const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
 
 formulario.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -17,6 +18,7 @@ function checkInputs() {
         const apellidoValor = apellido.value.trim();
         const emailValor = email.value.trim();
         const telefonoValor = telefono.value.trim();
+        const mensajeValor = mensaje.value.trim();
         if (nameValor === ""){
             setErrorFor(nombre, "No se puede dejar el nombre en blanco");
         }else{
@@ -38,6 +40,11 @@ function checkInputs() {
             setErrorFor(telefono, "No se puede dejar el teléfono en blanco");
         }else{
             setSuccessFor(telefono);
+        } 
+        if (mensajeValor === ""){
+            setErrorFor(mensaje, "No se puede dejar el comentario en blanco");
+        }else{
+            setSuccessFor(mensaje);
         }
      
 }
