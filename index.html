@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="Img/favicon.svg">
     <link rel="stylesheet" href="style2.css">
     <title>Mascotines</title>
 
@@ -27,69 +27,25 @@
                 <li><a href="#">Promociones</a></li>
                 <li><a href="#">¿Te ayudamos?</a></li>
                 <li><a href="#">Atención al cliente</a></li>
-                <li><input class="search" type="text" placeholder="Busqueda"> </li>
+                <li><input class="search" type="text" placeholder="busca un producto.."> </li>
             </ul>
-            <div id="carro">
-            <i id="cesta" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
-        </div>
+            
+            <div class="header-section container">
+                <div>
+                    <img onclick="showCart(this)" class="cart" src="/Img/cart.png" alt="">
+                    <p class="count-product">0</p>
+                </div>
+                <div class="cart-products" id="products-id">
+                    <p class="close-btn" onclick="closeBtn()">X</p>
+                    <h3>Mi carrito</h3>
+                    <div class="card-items">
+                    </div>
+                    <h2>Total: $<strong class="price-total">0</strong></h2>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <!-- Carrito de Compras -->
-    <!-- <div class="carrito" id="carrito">
-        <div class="header-carrito">
-            <h2>Tu Carrito</h2>
-        </div>
-    
-        <div class="carrito-items">
-            
-                
-            <div class="carrito-item">
-                <img src="recursos/hills.png" width="80px" alt="">
-                <div class="carrito-item-detalles">
-                    <span class="carrito-item-titulo">HILL`S</span>
-                    <div class="selector-cantidad">
-                        <i class="fa-solid fa-minus restar-cantidad"></i>
-                        <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                        <i class="fa-solid fa-plus sumar-cantidad"></i>
-                    </div>
-                    <span class="carrito-item-precio">48.49€</span>
-                </div>
-            <span class="btn-eliminar">
-                    <i class="fa-solid fa-trash"></i>
-            </span>
-            </div>
-            <div class="carrito-item">
-                <img src="recursos/hills.png" width="80px" alt="">
-                <div class="carrito-item-detalles">
-                    <span class="carrito-item-titulo">Skin Glam</span>
-                    <div class="selector-cantidad">
-                        <i class="fa-solid fa-minus restar-cantidad"></i>
-                        <input type="text" value="3" class="carrito-item-cantidad" disabled>
-                        <i class="fa-solid fa-plus sumar-cantidad"></i>
-                    </div>
-                    <span class="carrito-item-precio">18.90€</span>
-                </div>
-            <button class="btn-eliminar">
-                    <i class="fa-solid fa-trash"></i>
-            </button>
-            </div> -->
-    
-
-        <!-- </div>
-        <div class="carrito-total">
-            <div class="fila">
-                <strong>Total</strong>
-                <span class="carrito-precio-total"></span>
-            </div>
-            <button class="btn-eliminar">
-                <i class="fa-solid fa-trash"></i>
-        </button>
-            <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
-        </div>
-    </div> -->
-
-    <!--<section class="Contenedor">-->
 
     <div class="fotogrande"></div>
 
@@ -140,63 +96,87 @@
         </div>
 
         <div class="contenedorProductos">
-            <div class="contenedor-items">
+            <div class="products"> 
+                <!--class =contenedor-items -->
 
-                <div class="item">
-                    <span class="titulo-item">Royal Canin Mini Adult pienso para perros</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">15,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/royal-canin.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">Royal Canin Mini Adult pienso para perros</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="1" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
 
-                <div class="item">
-                    <span class="titulo-item">Nath Adult Sterilised Pollo en Gelatina sobre para gatos</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">35,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/nath.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">Nath Adult Sterilised Pollo en Gelatina sobre para gatos</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="2" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
 
-                <div class="item">
-                    <span class="titulo-item">Vitakraft Premium Menu Comida para periquitos</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">18,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/th-3187545022.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">Vitakraft Premium Menu Comida para periquitos</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="3" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
 
-                <div class="item">
-                    <span class="titulo-item">Small Life kit de iniciación para conejos</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">45,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/tk.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">TK-Pet Barcelona Transportín de plástico para mascotas</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="4" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
 
-                <div class="item">
-                    <span class="titulo-item">Nova Clean Bandeja de Empapadores para perros</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">35,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/kit-conejp.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">Small Life kit de iniciación para conejos</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="5" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
 
-                <div class="item">
-                    <span class="titulo-item">TK-Pet Barcelona Transportín de plástico para mascotas</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">19,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
+                <div class="carts">
+                    <div>
+                        <img src="/Img/empapadores.jpg" alt="" class="img-item">
+                    </div>
+                    <!--class item-->
+                    <p class="title">Nova Clean Bandeja de Empapadores para perros</p>
+                    <div>
+                        <p class="precio-item"><span >15,90</span>€</p>
+                    </div>
+             
+                    <a href="" data-id="6" class="btn-add-cart">Agregar al Carrito</a>
                 </div>
-
-                <div class="item">
-                    <span class="titulo-item">Scalibor Collar Antiparasitario para perros</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">24,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
-                </div>
-
-                <div class="item">
-                    <span class="titulo-item">Seresto Collar Antiparasitario y Advantix Pipetas para perros - Pack</span>
-                    <img src="/Img/pack de comida 1.png" alt="" class="img-item">
-                    <span class="precio-item">79,90€</span>
-                    <button class="boton-item">Agregar al Carrito</button>
-                </div>
+        
             </div>
         </div>
     </section>      
@@ -315,6 +295,16 @@
     <!-- </div> -->
 </footer>
     <script src="formulario.js"></script>
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+            document.getElementById("products-id").style.display = "none";
+        }
+
+    </script>
+    <script src="custom.js"></script>
 </body>
 
 </html>
