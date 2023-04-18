@@ -90,6 +90,11 @@ function loadHtml(){
             <div class="item-content">
                 <h5>${title}</h5>
                 <h5 class="cart-price">${price}$</h5>
+                <div class="selector-cantidad">
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
                 <h6>Unidades: ${amount}</h6>
             </div>
             <span class="delete-product" data-id="${id}">X</span>

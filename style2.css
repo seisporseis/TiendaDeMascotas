@@ -26,7 +26,6 @@ p {
 .logo {
     margin: 20%;
     border-radius: 100px;
-    width: 100px;
 }
 
 .footer-ezquierda img {
@@ -40,28 +39,50 @@ p {
     line-height: 2rem;
 }
 
-/*--------------FIN Estilos generales--------------*/
 
 /*-----------------------Header--------------------*/
-    header {
+    /* header {
         background-color: #e4e4e8;
         padding-top: 18px;
         padding-bottom: 18px;
         box-shadow: 0 7px 8px -3px grey;
-        /* position: fixed; */
+        position: fixed;
         width: 100%;
         margin-top: -10px;
-        /* z-index: 99; */
-    }
+        z-index: 99;
+    } */
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: end;
+    align-content: center;
     background: #D7C2C2;
     height: 150px;
 }	
+ /*----*/
+
+ nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 95px;
+    list-style: none;
+    z-index: 2;
+    margin: 60px 0 0 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a.active,
+li a:hover {
+    color: #B2709F;
+    transition: .2s;
+}
+
 	
 .search {
     border-radius: 10px;
@@ -91,21 +112,8 @@ nav {
     height: 300px;
 }
 
-
 #check {
     display: none;
-}
-
-#carro {
-    position: relative;
-}
-
-#cesta {
-    position: absolute;
-    padding: 11px 8px;
-    right: 6px;
-    top: 45px;
-    font-size: 28px;
 }
 
 /*Escritorio*/
@@ -113,11 +121,6 @@ nav {
     
     /*------Barra de navegacion------*/
 
-    .contenedorProductos{
-        max-width: 1200px;
-        text-align: center;
-        margin: auto;
-    }
     .header-section{
         display: flex;
         justify-content: flex-end;
@@ -125,35 +128,33 @@ nav {
         align-items: center;
         position: relative;
     }
+
     .header-section div{
         position: relative;
     }
+
     .header-section p{
         position: absolute;
-        top: -24px;
-        right: -8px;
+        top: 1px;
+        right: 1px;
         background-color: #fff;
         padding: 1px 6px;
         border-radius: 50%;
-        color: red;
+        color: #b2709f;
         font-weight: 700;
-        font-family: system-ui;
         line-height: 18px;
     }
 
-    .cart{
-        width: 39px;
-        height: 38px;
-    }
     .cart-products{
         position: absolute!important;
         top: 82px;
-        right: -18px;
+        right: 10px;
         background-color: #fff;
         padding: 0 18px;
         box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
         display: none;
         min-width: 290px;
+        border-radius: 10px;
     }
     
     .cart:hover{
@@ -162,88 +163,93 @@ nav {
     }
 
     /*float cart*/
-.cart-products .item img{
-    width: 115px;
-}
-
-.cart-products .item{
-    display: flex;
-    align-items: center;
-    border-bottom: solid 2px red;
-}
-.cart-products .item .item-content{
-    margin: 0 19px;
-    width: 201px;
-}
-.cart-products .item .item-content h5{
-    margin: 0;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: system-ui;
-}
-.cart-products .item .item-content h6{
-    margin: 0;
-    font-size: 13px;
-    font-weight: 400;
-    font-family: system-ui;
-}
-.cart-products .item span{
-    background-color: red;
-    padding: 0px 5px;
-    border-radius: 50%;
-    color: #fff;
-    font-family: system-ui;
-    cursor: pointer;
-}
-.cart-products h3{
-    margin-bottom: 0;
-}
-.cart-products .item .item-content h5.cart-price{
-    font-weight: 700;
-}
-
-/*style to btn close*/
-p.close-btn{
-    top: -4px;
-    right: 6px;
-    cursor: pointer;
-    color: #000;
-}
-p.author {
-    display: flex;
-    justify-content: center;
-    FONT-VARIANT: JIS04;
-    margin-top: 3%;
-    gap: 7px;
-}
-p.author a {
-    text-decoration: none;
-    font-weight: 700;
-    color: #000;
-}
-
-    /*----*/
-
-    /* nav ul {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        gap: 80px;
-        list-style: none;
-        z-index: 2;
+    .cart-products .item img{
+        width: 100px;
     }
 
-    nav ul li a {
+    .cart-products .item{
+        display: flex;
+        align-items: center;
+        border-bottom: solid 2px #b2709f;
+        padding: 2% 0;
+    }
+    .cart-products .item .item-content{
+        margin: 0 60px;
+        width: 200px;
+        padding: 2%;
+    }
+    .cart-products .item .item-content h5{
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .cart-products .item .item-content h6{
+        margin: 0;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .cart-products .item span{
+        background-color: red;
+        padding: 0px 5px;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+    }
+    .cart-products h3{
+        margin-bottom: 0;
+    }
+    .cart-products .item .item-content h5.cart-price{
+        font-weight: 700;
+    }
+
+    .carrito-item-cantidad {
+        width: 20px;
+        text-align: center;
+    }
+
+
+
+    .btn-pagar {
+        background-color: #b2709f;
         text-decoration: none;
         color: white;
+        padding: 2% 5% 2% 5%;
+        text-align: center;
+        margin-bottom: 5%;
+        border-radius: 10px;
+    }
+    .toPay {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+        padding-top: 3%;
+        
     }
 
-    li a.active,
-    li a:hover {
-        color: #B2709F;
-        transition: .2s;
-    } */
-    
+/*style to btn close*/
+    p.close-btn{
+        background-color: #D9d9d9;
+        top: -10px;
+        right: 6px;
+        cursor: pointer;
+        color: #000;
+        padding: 0px 5px;
+    }
+    p.author {
+        display: flex;
+        justify-content: center;
+        FONT-VARIANT: JIS04;
+        margin-top: 3%;
+        gap: 7px;
+    }
+    p.author a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #000;
+    }
+
+
     
     /*------Servicios------*/
 
@@ -522,14 +528,13 @@ p.author a {
     .form button {
         background-color: #8e44ad;
         border: 2px solid #8e44ad;
-        border-radius: 4px;
+        border-radius: 10px;
         color: #fff;
         display: block;
-        font-family: inherit;
-        font-size: 16px;
         padding: 10px;
         margin-top: 20px;
-        width: 100%;
+        width: 50%;
+        cursor: pointer;
     }
 
     input#email.email {
