@@ -14,13 +14,13 @@
 <body>
     <header>
         <nav>
+            <a href="#" class="enlace">
+                <img src="/Img/logo-mascotines.png" alt="" class="logo">
+            </a>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
                 <img class="hamburguesa" src="/Img/barra-de-menus.png" >
             </label>
-            <a href="#" class="enlace">
-                <img src="/Img/logo-mascotines.png" alt="" class="logo">
-            </a>
             <ul>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Productos</a></li>
@@ -108,9 +108,9 @@
                         <img src="/Img/royal-canin.jpg" alt="" class="img-item">
                     </div>
                     <!--class item-->
-                    <p class="title">Royal Canin Mini Adult pienso para perros</p>
-                    <div>
-                        <p class="precio-item"><span>15,90</span>€</p>
+                    <p class="title">Royal Canin Mini Adult pienso para perros mayores</p>
+                    <div> 
+                        <p class="precio-item"><span>25.40</span>€</p>
                     </div>
              
                     <a href="" data-id="1" class="btn-add-cart">Agregar al Carrito</a>
@@ -123,7 +123,7 @@
                     <!--class item-->
                     <p class="title">Nath Adult Sterilised Pollo en Gelatina sobre para gatos</p>
                     <div>
-                        <p class="precio-item"><span >15,90</span>€</p>
+                        <p class="precio-item"><span >48.30</span>€</p>
                     </div>
              
                     <a href="" data-id="2" class="btn-add-cart">Agregar al Carrito</a>
@@ -136,7 +136,7 @@
                     <!--class item-->
                     <p class="title">Vitakraft Premium Menu Comida para periquitos</p>
                     <div>
-                        <p class="precio-item"><span>15,90</span>€</p>
+                        <p class="precio-item"><span>18.50</span>€</p>
                     </div>
              
                     <a href="" data-id="3" class="btn-add-cart">Agregar al Carrito</a>
@@ -149,7 +149,7 @@
                     <!--class item-->
                     <p class="title">TK-Pet Barcelona Transportín de plástico para mascotas</p>
                     <div>
-                        <p class="precio-item"><span>15,90</span>€</p>
+                        <p class="precio-item"><span>79.60</span>€</p>
                     </div>
              
                     <a href="" data-id="4" class="btn-add-cart">Agregar al Carrito</a>
@@ -160,9 +160,9 @@
                         <img src="/Img/kit-conejp.jpg" alt="" class="img-item">
                     </div>
                     <!--class item-->
-                    <p class="title">Small Life kit de iniciación para conejos</p>
+                    <p class="title">Small Life kit de iniciación para disfrutar con tus conejos</p>
                     <div>
-                        <p class="precio-item"><span>15.90</span>€</p>
+                        <p class="precio-item"><span>48.20</span>€</p>
                     </div>
              
                     <a href="" data-id="5" class="btn-add-cart">Agregar al Carrito</a>
@@ -175,7 +175,7 @@
                     <!--class item-->
                     <p class="title">Nova Clean Bandeja de Empapadores para perros</p>
                     <div>
-                        <p class="precio-item"><span>30,00</span>€</p>
+                        <p class="precio-item"><span>10.35</span>€</p>
                     </div>
              
                     <a href="" data-id="6" class="btn-add-cart">Agregar al Carrito</a>
@@ -183,33 +183,7 @@
         
             </div>
         </div>
-    </section>      
-                          
-
-    <!-- <div class="containerForm centrado">
-        <h2>¿En qué te podemos ayudar?</h2>
-        <form>
-            <label for="name">Nombre</label>
-            <input type="text" id="name" minlength="3" size="30" placeholder="  Nombre y Apellidos"
-                title="Escribe solo tu nombre" required>
-            <br>
-            <label for="email">Email</label>
-            <input class="email" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30"
-                placeholder="  hola@ejemplo.com" required>
-            <br>
-            <label for="telefono">Teléfono </label>
-            <input type="tel" id="telefono" maxlength="12" size="30" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                placeholder="  +34 600 000 000" title="escribe solo números" required>
-            <br>
-            <div class="mensaje">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" rows="35" cols="35" placeholder="  Escribe aquí tus dudas" required> </textarea>
-                <br>
-            </div>
-            <input class="formButton" type="submit" value="Enviar">
-            <br>
-        </form>
-    </div> -->
+    </section>     
     <div class="containerForm">
         <h3>¿En qué te podemos ayudar?</h3>
       
@@ -225,7 +199,7 @@
                 <br>
             </div>
             <div class=form-control>
-                <label for="apellido">Apellido</label>
+                <label for="apellido">Apellidos</label>
                 <input type="text" id="apellido" minlength="3"  placeholder="  Apellidos"
                     title="Escribe solo tu apellido" >
                     <i class="fas fa-check-circle"></i>
@@ -265,7 +239,7 @@
             <button class="formButton" type="submit" value="Enviar">Enviar</button> 
             <br>
         </form> 
-     <div id ="error">
+    <div id ="error">
 
     </div> 
     </div>
@@ -296,18 +270,8 @@
             <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
-    <!-- </div> -->
 </footer>
     <script src="formulario.js"></script>
-    <script>
-        function showCart(x){
-            document.getElementById("products-id").style.display = "block";
-        }
-        function closeBtn(){
-            document.getElementById("products-id").style.display = "none";
-        }
-
-    </script>
     <script src="custom.js"></script>
 </body>
 
