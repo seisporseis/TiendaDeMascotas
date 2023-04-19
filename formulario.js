@@ -19,35 +19,40 @@ function checkInputs() {
         const emailValor = email.value.trim();
         const telefonoValor = telefono.value.trim();
         const mensajeValor = mensaje.value.trim();
-        if (nameValor === ""){
+        
+        if (nameValor === "") {
             setErrorFor(nombre, "No se puede dejar el nombre en blanco");
         }else{
             setSuccessFor(nombre);
         }
-        if (apellidoValor === ""){
+        if (apellidoValor === "") {
             setErrorFor(apellido, "No se puede dejar el apellido en blanco");
         }else{
             setSuccessFor(apellido);
         }
         if(emailValor === "") {
             setErrorFor(email, 'No puede dejar el email en blanco');
-        } else if (!isEmail(emailValor)) {
+        } else if (!isEmail(email)) {
             setErrorFor(email, 'No ingreso un email válido');
         } else {
             setSuccessFor(email);
         }
         if (telefonoValor === ""){
             setErrorFor(telefono, "No se puede dejar el teléfono en blanco");
-        }else{
+        } else if(!(/^\+\d{2,3}\s\d{9}$/.test(telefono))) {
+                  setErrorFor(telefono, "el teléfono debe constar + seguido de 2 dígitos  + espacio en blanco y 9 cifras consecutivas"); 
+         }
+         else{
             setSuccessFor(telefono);
-        } 
+         }
+        
         if (mensajeValor === ""){
             setErrorFor(mensaje, "No se puede dejar el comentario en blanco");
         }else{
             setSuccessFor(mensaje);
         }
-     
-}
+    }
+
 // valida el error
 function setErrorFor(input, message){
     const formControl =input.parentElement;
