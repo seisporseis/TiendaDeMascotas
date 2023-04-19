@@ -31,5 +31,27 @@ curso de Web Fullstack de Factoria F5.
  
   
   ## Participantes
- Alejandro, Anthony, Eduardo, Ivon, Patricia y Sabina.  
+ Alejandro, Anthony, Eduardo, Ivon, Patricia y Sabina. 
+
+ # Ej2_Dogos
+
+ este repositorio contiene un carrito de compras funcional y validaciones al dia con javaScript.
+ es la continuacion del trabajo anterior "Mascotines" con algunas modificaciones solicitadas por el cliente.
+
+## Lenguagen de programación y herramientas de gestión
+ - HTML 5
+ - CSS 3
+ - Figma
+ - Trello
+ - Github
+ - javaScript
+
+ ## Modalidades pedagógicas trabajadas
+  - trabajo en equipo 
+  - sprint
+  - SCRUM (Roles, Daily, Planning, Retrospective)
+  - WireFrame - Mockup - UX/UI en Figma
+  - Git para control de versiones
  
+ ## Participantes
+ Jesús, Dalia, Jorge, Carla y Andrés.

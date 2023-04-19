@@ -1,4 +1,4 @@
-// formulario Jorge
+// formulario 
 const formulario = document.getElementById("formulario");
 const nombre = document.getElementById("name");
 const apellido = document.getElementById("apellido");
@@ -40,11 +40,11 @@ function checkInputs() {
         if (telefonoValor === ""){
             setErrorFor(telefono, "No se puede dejar el teléfono en blanco");
         } else if(!(/^\+\d{2,3}\s\d{9}$/.test(telefono))) {
-                  setErrorFor(telefono, "el teléfono debe constar + seguido de 2 dígitos  + espacio en blanco y 9 cifras consecutivas"); 
-         }
-         else{
+                setErrorFor(telefono, "el teléfono debe constar + seguido de 2 dígitos  + espacio en blanco y 9 cifras consecutivas"); 
+        }
+        else{
             setSuccessFor(telefono);
-         }
+        }
         
         if (mensajeValor === ""){
             setErrorFor(mensaje, "No se puede dejar el comentario en blanco");
